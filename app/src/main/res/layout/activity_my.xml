@@ -1,0 +1,283 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MyActivity">
+
+    <TextView
+        android:text="@string/hello_world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/statusText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Start Connection"
+        android:textSize="10sp"
+        android:id="@+id/buttonConnection"
+        android:clickable="true"
+        android:onClick="clickButton"
+        android:layout_below="@+id/statusText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="10sp"
+        android:text="Arm the Cop"
+        android:id="@+id/buttonMode1"
+        android:clickable="true"
+        android:onClick="clickButtonArmit"
+        android:layout_below="@+id/buttonConnection"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/buttonConnection"
+        android:layout_alignEnd="@+id/buttonConnection" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Disarm the Cop"
+        android:textSize="10sp"
+        android:id="@+id/buttonMode2"
+        android:onClick="clickButtonDisarmit"
+        android:clickable="true"
+        android:layout_below="@+id/buttonMode1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/buttonMode1"
+        android:layout_alignEnd="@+id/buttonMode1" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/buttonMode1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_marginTop="45dp"
+        android:id="@+id/tableLayout">
+       <TableRow>
+           <Button
+               android:id="@+id/arrow_t_up"
+
+               android:text="Thr Up"
+               android:textColor="#fff3fdff"
+               android:textSize="20sp"
+               android:layout_width="140dp"
+               android:layout_height="70dp"
+               android:background="@drawable/buttonshape"
+               android:clickable="true"
+               android:onClick="clickButtonThrottleUp" />
+
+           <Button
+               android:id="@+id/arrow_e_up"
+               android:text="Elev Up"
+               android:textColor="#fff0fff6"
+               android:textSize="20sp"
+               android:layout_width="140dp"
+               android:layout_height="70dp"
+               android:background="@drawable/buttonshape"
+               android:onClick="clickButtonElevatorDown"
+               android:clickable="true" />
+
+
+       </TableRow>
+    <TableRow>
+
+        <Button
+            android:id="@+id/arrow_t_do"
+            android:text="Thr Dow"
+            android:textColor="#fff5fffa"
+            android:textSize="20sp"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
+            android:background="@drawable/buttonshape1"
+            android:onClick="clickButtonThrottleDown"
+            android:clickable="true" />
+
+        <Button
+            android:id="@+id/arrow_e_do"
+            android:text="E Down"
+            android:textColor="#fff5ffef"
+            android:textSize="20sp"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
+            android:background="@drawable/buttonshape1"
+            android:onClick="clickButtonElevatorUp"
+            android:clickable="true" />
+    </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Elev Center"
+                android:textSize="10sp"
+                android:id="@+id/buttonElevatorCenter"
+                android:layout_column="1"
+                android:clickable="true"
+                android:onClick="clickButtonElevatorCenter" />
+
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/buttonMode1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_marginTop="210dp"
+        android:id="@+id/tableLayout1">
+<TableRow>
+        <Button
+            android:id="@+id/arrow_y_up"
+
+            android:text="Yaw left"
+            android:textColor="#fffbfff0"
+            android:textSize="20sp"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:background="@drawable/buttonshape2"
+            android:clickable="true"
+            android:onClick="clickButtonYawUp" />
+
+    <Button
+        android:id="@+id/arrow_y_do"
+        android:text="Y Right"
+        android:textColor="#fffffbfd"
+        android:textSize="20sp"
+        android:layout_width="70dp"
+        android:layout_height="80dp"
+        android:background="@drawable/buttonshape3"
+        android:clickable="true"
+        android:onClick="clickButtonYawDown" />
+    <Button
+        android:id="@+id/arrow_a_up"
+        android:text="A Left"
+        android:textColor="#fff9fff9"
+        android:textSize="20sp"
+        android:layout_width="65dp"
+        android:layout_height="80dp"
+        android:background="@drawable/buttonshape2"
+        android:onClick="clickButtonAileronDown"
+        android:clickable="true" />
+    <Button
+        android:id="@+id/arrow_a_do"
+        android:text="A Right"
+        android:textColor="#fff8ffed"
+        android:textSize="20sp"
+        android:layout_width="65dp"
+        android:layout_height="80dp"
+        android:background="@drawable/buttonshape3"
+        android:onClick="clickButtonAileronUp"
+        android:clickable="true" />
+</TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:text="Yaw Center"
+                android:textSize="10sp"
+                android:id="@+id/buttonYawCenter"
+                android:layout_height="30dp"
+                android:layout_column="0"
+                android:clickable="true"
+                android:onClick="clickButtonYawCenter" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:text="Aileron Center"
+                android:id="@+id/buttonAileronCenter"
+                android:layout_column="2"
+                android:textSize="10sp"
+                android:layout_height="30dp"
+                android:clickable="true"
+                android:onClick="clickButtonAileronCenter" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        </TableRow>
+        <TableRow>
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="Emergency Stop"
+            android:textSize="10sp"
+            android:id="@+id/stopButton"
+            android:layout_column="0"
+            android:clickable="true"
+            android:onClick="clickStopButton"
+            android:layout_below="@+id/tableLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#ffff0e17" />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="Smooth Stop"
+            android:textSize="10sp"
+            android:id="@+id/stopButtonsmooth"
+            android:layout_column="2"
+            android:clickable="true"
+            android:onClick="clickStopButtonSmooth"
+            android:layout_below="@+id/tableLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#ffff7814" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Idle Mode"
+        android:id="@+id/flightStatusText"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SystemsWorking"
+        android:id="@+id/detailText"
+        android:layout_alignBottom="@+id/buttonMode2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Control:"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/flightStatusText"
+        android:layout_alignLeft="@+id/detailText"
+        android:layout_alignStart="@+id/detailText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status:"
+        android:id="@+id/textView3"
+
+        android:layout_below="@+id/statusText"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
+</RelativeLayout>
